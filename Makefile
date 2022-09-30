@@ -7,6 +7,7 @@ RM = rm -rf
 SRC = $(filter-out ft_ls%.c , $(wildcard *.c))
 BSRC = $(filter ft_ls%.c , $(wildcard *.c))
 
+
 OBJ = $(SRC:.c=.o)
 BOBJ = $(BSRC:.c=.o)
 
@@ -20,8 +21,9 @@ $(NAME):$(OBJ)
 	@$(AR) $(NAME) $(OBJ)
 	@echo ---library generated----
 
-%.o:%.c
+%.o: %.c
 	@$(CC) $(CFLAGS) -c $< -o $@
+
 clean:
 	@$(RM) $(OBJ)
 	@echo ---objects cleaned----
