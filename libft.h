@@ -6,13 +6,14 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:41:15 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/01 11:41:53 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/01 12:27:11 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include<stdio.h>
+# include<stdlib.h>
 
 size_t	ft_strlen(const char *s);
 int		ft_isalpha(int c);
