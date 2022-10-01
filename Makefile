@@ -4,8 +4,8 @@ AR = ar rcs
 CFLAGS = -Wall -Wextra -Werror -I .
 RM = rm -rf
 
-SRC = $(filter-out ft_ls%.c , $(wildcard *.c))
-BSRC = $(filter ft_ls%.c , $(wildcard *.c))
+SRC = $(filter-out ft_ls%.c , $(wildcard ft_*.c))
+BSRC = $(filter ft_ls%.c , $(wildcard ft_*.c))
 
 
 OBJ = $(SRC:.c=.o)
