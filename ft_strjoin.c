@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 14:13:12 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/02 15:01:18 by mkhellou         ###   ########.fr       */
+/*   Created: 2022/10/02 15:19:29 by mkhellou          #+#    #+#             */
+/*   Updated: 2022/10/02 15:28:45 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	void	*str;
+	int		len;
+	char	*result;
 
-	if (size >= SIZE_MAX || count >= SIZE_MAX)
+	if (s1 == NULL || s2 == NULL)
 		return (0);
-	str = malloc(count * size);
-	if (!str)
+	len = ft_strlen(s1);
+	len += ft_strlen((s2));
+	result = (char *)malloc(sizeof(char) * len + 1);
+	if (!result)
 		return (0);
-	ft_bzero(str, count * size);
-	return (str);
+	ft_strlcpy(result, s1, len + 1);
+	ft_strlcat(result, s2, len + 1);
+	return (result);
 }
