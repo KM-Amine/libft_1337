@@ -21,7 +21,7 @@ $(NAME):$(OBJ)
 	@$(AR) $(NAME) $(OBJ)
 	@echo ---library generated----
 
-%.o: %.c
+%.o: %.c libft.h
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

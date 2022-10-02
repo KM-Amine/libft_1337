@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:41:15 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/01 14:27:48 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/02 13:04:48 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,8 @@ size_t	ft_strlcpy(char*dst, const char *src, size_t dstsize);
 char	*ft_strdup(const char *s1);
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t count, size_t size);
+int		ft_atoi(const char *str);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 #endif
