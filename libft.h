@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:41:15 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/02 13:40:07 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/02 14:00:41 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,6 @@ int		ft_atoi(const char *str);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
 
 #endif
