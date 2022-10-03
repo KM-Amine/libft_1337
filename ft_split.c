@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 11:16:32 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/03 19:13:25 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/03 19:43:53 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,29 +31,18 @@ static char	*strtrim(char const *s1, char const *set)
 static int	count_strings(char *trimed, char c)
 {
 	int	i;
-	int	j;
-	int	b;
 	int	len;
 
-	b = 0;
 	i = 0;
-	j = 0;
 	len = ft_strlen(trimed);
-	while (i <= len)
+	while (ft_strchr(trimed,c))
 	{
-		if (trimed[i] == c && b == 0)
-		{
-			j++;
-			b = 1;
-		}
-		if (trimed[i] != c)
-		{
-			b = 0;
-		}
-			i++;
-		printf("%d",j + 1);
-	}
-	return (j +1);
+		trimed = ft_strchr(trimed,c)+1;
+		if (*trimed == c)
+			continue ;
+		i++; 
+	}	
+	return (i+1);
 }
 
 char	**ft_split(char const *s, char c)
