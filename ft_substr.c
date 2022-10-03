@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 16:54:59 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/02 19:46:43 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/03 12:17:57 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = ft_strlen(s);
 	if (start >= ft_strlen(s))
 		return ((char *)ft_calloc(sizeof(char), 1));
-	res = (char *)malloc(sizeof(char) * len +1);
+	res = (char *)ft_calloc(sizeof(char), len + 1);
 	if (!res)
 		return (0);
-	ft_strlcpy(res, &s[start], len +1);
+	ft_strlcpy(res, &s[start], len + 1);
 	return (res);
 }

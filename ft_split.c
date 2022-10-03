@@ -1,26 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 13:15:40 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/03 11:15:33 by mkhellou         ###   ########.fr       */
+/*   Created: 2022/10/03 11:16:32 by mkhellou          #+#    #+#             */
+/*   Updated: 2022/10/03 12:32:13 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+static int	count(char *trimed, char c)
 {
-	size_t	len;
-	char	*duplicate;
+	int		i;
+	char	*inter;
 
-	len = ft_strlen(s1) + 1;
-	duplicate = (char *)malloc(len * sizeof(char));
-	if (!duplicate)
-		return (0);
-	ft_strlcpy(duplicate, s1, len + 1);
-	return (duplicate);
+	inter = trimed;
+	i = 0;
+	while (ft_strchr(inter, c))
+	{
+		inter = ft_strchr(inter, c) + 1;
+		i++;
+	}
+	i++;
+	return (i);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	*trimed;
+	int		i;
+	char	*inter;
+
+	trimed = ft_strtrim(s, &c);
+	printf("%d", count(trimed, c));
+	free (trimed);
+	return (0);
 }
