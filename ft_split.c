@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 11:16:32 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/03 19:43:53 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/04 11:56:27 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,36 @@ static char	*strtrim(char const *s1, char const *set)
 	return (ft_substr(s1, i, (j - i + 1)));
 }
 
+static int	count_strings(char *trimed, char c)
+{
+	int	i;
+
+	while (*trimed == c)
+		trimed ++;
+	while ()
+	{
+		if (*trimed == c)
+			trimed ++;
+		if(*trimed != c)
+			trimed ++;
+			i++;
+	}
+	i = 0;
+	return (i + 1);
+}
+
+static void	free_all(char **big,int j)
+{
+	int	i;
+
+	i = 0;
+	while (i < j)
+	{
+		free(big[i]);
+		i++;
+	}
+	free(big);
+}
 static int	count_strings(char *trimed, char c)
 {
 	int	i;
@@ -53,11 +83,24 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
+	i = 0;
+	while (s[i] == c)
+		i++;
+	if (s[i] =='\0')
+		return(big = ft_calloc(2,sizeof(char **)));
 	if (!s)
 		return (0);
-	trimed = strtrim(s, &c);
+	if( s[0] == '\0')
+	{
+		return(big = ft_calloc(1,sizeof(char **)));
+	}
+	trimed = ft_strtrim(s, &c);
+	if(!trimed)
+		return(0);
 	count = count_strings(trimed, c);
 	big = (char **)ft_calloc(count + 1, sizeof(char *));
+	if(!big)
+		return(0);
 	j = 0;
 	i = 0;
 	while (j < count)
@@ -67,7 +110,8 @@ char	**ft_split(char const *s, char c)
 			trimed = ft_strchr(trimed, c) + 1;
 		i = ft_strchr(trimed, c) - trimed;
 		big[j] = ft_substr(trimed, 0, i);
-		//printf("%s\n", big[j]);
+		if (!big[j])
+			free_all(big,j);
 		j++;
 	}
 	return (big);
