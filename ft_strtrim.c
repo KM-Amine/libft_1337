@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 15:37:40 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/06 10:24:47 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:37:12 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (s1 == NULL || set == NULL)
 		return (0);
 	i = 0;
-	j = ft_strlen(s1) - 1;
+	j = ft_strlen(s1);
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	if (s1[i] == '\0')

@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 12:05:52 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/06 16:46:11 by mkhellou         ###   ########.fr       */
+/*   Created: 2022/10/06 18:20:22 by mkhellou          #+#    #+#             */
+/*   Updated: 2022/10/06 18:38:04 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t	i;
+	size_t	len;
+	t_list	*dup;
 
-	i = 0;
-	while (i < n)
+	len = ft_lstsize(lst);
+	while (len > 0)
 	{
-		if (((unsigned char *)s)[i] == (unsigned char)c)
-			return (((unsigned char *)s) + i);
-		i++;
+		ft_lstadd_back(&dup, ft_lstnew(NULL));
+		len--;
 	}
-	return (NULL);
+	while (dup != NULL)
+	{
+		f(dup ->)
+		dup = dup -> next;
+	}	
+	return (0);
 }
