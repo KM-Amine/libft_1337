@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 10:42:34 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/03 17:06:15 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/06 10:34:27 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ char	*ft_strchr(const char *s, int c)
 	len = ft_strlen(s);
 	while (i <= len)
 	{
-		if (((unsigned char *)s)[i] == (unsigned char)c)
-		{
+		if (s[i] == (char)c)
 			return ((char *)&s[i]);
-		}
 		i++;
 	}
 	return (0);
