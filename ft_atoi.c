@@ -6,13 +6,13 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 14:29:32 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/06 10:11:41 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/07 10:11:03 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	number_creator(const char *str, int i, int sign)
+static int	number_creator(const char *str, int i, int sign)
 {
 	int	save;
 	int	result;

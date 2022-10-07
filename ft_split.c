@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 11:16:32 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/06 10:08:28 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/07 14:28:11 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 	{
 		s = s + i;
 		while (*s == c)
-			s = ft_strchr(s, c) + 1;
+			s++;
 		i = ft_strchr(s, c) - s;
 		big[j] = ft_substr(s, 0, i);
 		if (!big[j])
