@@ -24,7 +24,6 @@ $(NAME):$(OBJ)
 %.o: %.c libft.h
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-
 clean:
 	@$(RM) $(OBJ)
 	@echo ---objects cleaned----
