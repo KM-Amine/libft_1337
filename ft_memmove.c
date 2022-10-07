@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 10:00:46 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/01 12:16:33 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/07 16:25:50 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,17 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (dst > src)
+	unsigned char	*s;
+	unsigned char	*d;
+
+	s = (unsigned char *)src;
+	d = (unsigned char *)dst;
+	if (d > s)
 	{
 		while (len)
 		{
 			len--;
-			((unsigned char *)dst)[len] = ((unsigned const char *)src)[len];
+			d[len] = s[len];
 		}
 	}
 	else

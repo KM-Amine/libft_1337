@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 13:15:40 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/03 11:15:33 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/07 17:16:08 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	char	*duplicate;
 
 	len = ft_strlen(s1) + 1;
-	duplicate = (char *)malloc(len * sizeof(char));
+	duplicate = (char *)ft_calloc(len, sizeof(char));
 	if (!duplicate)
 		return (0);
 	ft_strlcpy(duplicate, s1, len + 1);
