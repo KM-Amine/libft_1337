@@ -6,7 +6,7 @@
 /*   By: mkhellou <mkhellou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 11:21:57 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/01 12:01:26 by mkhellou         ###   ########.fr       */
+/*   Updated: 2022/10/07 09:51:03 by mkhellou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 
+	if (!n)
+		return (0);
 	i = 0;
 	while (i < n)
 	{

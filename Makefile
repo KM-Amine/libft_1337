@@ -25,7 +25,7 @@ $(NAME):$(OBJ)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@$(RM) $(OBJ)
+	@$(RM) $(OBJ) $(BOBJ)
 	@echo ---objects cleaned----
 fclean: clean
 	@$(RM) $(NAME)
