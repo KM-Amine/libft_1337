@@ -6,7 +6,7 @@
 /*   By:  mkhellou < mkhellou@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:41:15 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/07 17:58:22 by  mkhellou        ###   ########.fr       */
+/*   Updated: 2022/10/09 19:04:19 by  mkhellou        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *n);
 int		ft_lstsize(t_list *lst);

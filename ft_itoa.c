@@ -6,7 +6,7 @@
 /*   By:  mkhellou < mkhellou@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 09:52:31 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/07 17:52:46 by  mkhellou        ###   ########.fr       */
+/*   Updated: 2022/10/09 11:17:00 by  mkhellou        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	number_len(long n)
 	return (count);
 }
 
-static char	*filling_array(char *str, int len, long long nbr)
+static char	*filling_array(char *str, int len, long nbr)
 {
 	while (nbr > 0)
 	{
@@ -45,9 +45,9 @@ static char	*filling_array(char *str, int len, long long nbr)
 
 char	*ft_itoa(int n)
 {
-	char		*str;
-	int			len;
-	long long	nbr;
+	char	*str;
+	int		len;
+	long	nbr;
 
 	nbr = n;
 	len = number_len(nbr);

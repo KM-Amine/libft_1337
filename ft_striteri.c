@@ -6,7 +6,7 @@
 /*   By:  mkhellou < mkhellou@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 17:55:53 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/07 17:54:31 by  mkhellou        ###   ########.fr       */
+/*   Updated: 2022/10/09 11:32:23 by  mkhellou        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		f(i, &s[i]);
 		i++;
 	}
-	return ;
 }
