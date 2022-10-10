@@ -6,13 +6,13 @@
 #    By:  mkhellou < mkhellou@student.1337.ma>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/07 17:56:00 by  mkhellou         #+#    #+#              #
-#    Updated: 2022/10/09 07:50:45 by  mkhellou        ###   ########.fr        #
+#    Updated: 2022/10/10 08:01:12 by  mkhellou        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
-AR = ar rcs
+AR = ar r
 CFLAGS = -Wall -Wextra -Werror -I .
 RM = rm -rf
 HEADER  = libft.h
@@ -71,9 +71,9 @@ bonus: all $(BOBJ)
 	@$(AR) $(NAME) $(BOBJ)
 
 $(NAME):$(OBJ)
-	@$(AR) $(NAME) $(OBJ)
+	@$(AR) $@ $^
 
-%.o: %.c libft.h
+%.o: %.c $(HEADER)
 	@$(CC) $(CFLAGS) -c $< 
 
 clean:

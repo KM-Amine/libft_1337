@@ -6,7 +6,7 @@
 /*   By:  mkhellou < mkhellou@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 14:13:12 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/07 17:51:39 by  mkhellou        ###   ########.fr       */
+/*   Updated: 2022/10/10 07:52:40 by  mkhellou        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*str;
 
+	if (count >= 18446744073709551615UL || size >= 18446744073709551615UL)
+		return (NULL);
 	str = malloc(count * size);
 	if (!str)
 		return (0);
