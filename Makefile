@@ -6,13 +6,13 @@
 #    By:  mkhellou < mkhellou@student.1337.ma>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/07 17:56:00 by  mkhellou         #+#    #+#              #
-#    Updated: 2022/10/10 08:01:12 by  mkhellou        ###   ########.fr        #
+#    Updated: 2022/10/10 15:28:39 by  mkhellou        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = gcc
-AR = ar r
+AR = ar rcs
 CFLAGS = -Wall -Wextra -Werror -I .
 RM = rm -rf
 HEADER  = libft.h
