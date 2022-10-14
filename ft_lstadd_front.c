@@ -6,7 +6,7 @@
 /*   By:  mkhellou < mkhellou@student.1337.ma>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:29:49 by mkhellou          #+#    #+#             */
-/*   Updated: 2022/10/11 10:37:26 by  mkhellou        ###   ########.fr       */
+/*   Updated: 2022/10/11 14:35:34 by  mkhellou        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_front(t_list **lst, t_list *n)
 	if (!*lst)
 	{
 		*lst = n;
-		return;
+		return ;
 	}
 	n -> next = *lst;
 	(*lst) = n;
